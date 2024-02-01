@@ -2,7 +2,8 @@ install:
 	# installing...
 	pip install --upgrade pip && pip install -r requirements.txt
 format:
-	# formating...
+	black *.py backend/*.py
+	isort .
 lint:
 	# linging... flake8
 test:
