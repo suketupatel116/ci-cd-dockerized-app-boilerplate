@@ -6,6 +6,7 @@ format:
 	isort .
 lint:
 	# linging... flake8
+	pylint --disable=R,C *.py backend/*.py
 test:
 	# testing...
 deploy:
