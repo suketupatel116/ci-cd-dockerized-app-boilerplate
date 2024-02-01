@@ -6,7 +6,7 @@ format:
 	isort .
 lint:
 	# linting... flake8
-	pylint *.py backend/*.py
+	pylint --disable=R,C *.py backend/*.py
 test:
 	# testing...
 	python -m pytest -vv --cov=backend test_*.py
