@@ -1,6 +1,10 @@
+"""Tests"""
+
 from backend.fun import fun
 
+
 def test_fun():
-    input = "World"
-    response = fun(input)
-    assert response == f"Hello {input}"
+    """Test Assert Output"""
+    arg = "World"
+    response = fun(arg)
+    assert response == f"Hello {arg}"
