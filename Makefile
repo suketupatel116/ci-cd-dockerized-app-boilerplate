@@ -18,4 +18,8 @@ run:
 	docker run -p 127.0.0.1:8080:8080 e7fe4a6c343c
 deploy:
 	# deploying...
+	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 250088911685.dkr.ecr.us-east-1.amazonaws.com
+	docker build -t ci-cd-boilerplate-app .
+	docker tag ci-cd-boilerplate-app:latest 250088911685.dkr.ecr.us-east-1.amazonaws.com/ci-cd-boilerplate-app:latest
+	docker push 250088911685.dkr.ecr.us-east-1.amazonaws.com/ci-cd-boilerplate-app:latest
 all: install lint test deploy
