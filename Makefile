@@ -3,7 +3,7 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 format:
 	black *.py backend/*.py
-	isort .
+	isort *.py backend/*.py
 lint:
 	# linting... flake8
 	pylint --disable=R,C *.py backend/*.py
